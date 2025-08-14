@@ -5,7 +5,10 @@
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "symbols.hidesExplorerArrows": false,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "extensions.ignoreRecommendations": true,
   "typescript.tsserver.log": "off",
   "files.associations": {
@@ -22,7 +25,10 @@
     ".env.example": "gear"
   },
   "tailwindCSS.experimental.classRegex": [
-    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    [
+      "tv\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
   ],
   "editor.parameterHints.enabled": false,
   "editor.renderLineHighlight": "gutter",
@@ -79,11 +85,11 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "graphql"
+    "typescript",
+    "typescriptreact" // Adiciona TypeScript e React ao ESLint
   ],
   "editor.semanticHighlighting.enabled": false,
   "breadcrumbs.enabled": false,
-  "workbench.productIconTheme": "fluent-icons",
   "editor.fontFamily": "JetBrains Mono",
   "gitlens.codeLens.authors.enabled": false,
   "editor.tabSize": 2,
@@ -97,7 +103,6 @@
     ".vscode": true
     // "node_modules": true
   },
-  "workbench.iconTheme": "symbols",
   "update.mode": "start",
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -111,8 +116,18 @@
   "git.openRepositoryInParentFolders": "always",
   "symbols.hidesExplorerArrows": false,
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features" // Define ESLint como formatador padrão para JavaScript
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint" // Define ESLint como formatador padrão para JavaScript React
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features" // Define ESLint como formatador padrão para TypeScript
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features" // Define ESLint como formatador padrão para TypeScript React
+  },
+  "editor.formatOnSave": true, // Ativa a formatação automática ao salvar
   "console-ninja.featureSet": "Community",
   "workbench.editor.empty.hint": "hidden",
   "update.showReleaseNotes": false,
@@ -214,9 +229,59 @@
     "Usuario",
     "WEBPUSH"
   ],
-  "workbench.colorTheme": "Min Dark",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "workbench.layoutControl.enabled": false,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.colorTheme": "Min Dark",
+  "gitlens.views.drafts.avatars": false,
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedVariables": true,
+  "intelephense.files.associations": [
+    "**/*.php",
+    "**/*.phtml",
+    "**/*.tpl"
+  ],
+  "intelephense.files.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Tests,tests}/**",
+    "**/resources/views/**"
+  ],
+  "intelephense.environment.includePaths": [
+    "/path/to/vendor/**"
+  ],
+  "files.autoSave": "afterDelay",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "gitlens.views.branches.branches.layout": "list",
+  "workbench.iconTheme": "symbols",
+  "editor.largeFileOptimizations": false,
+  "settingsSync.ignoredExtensions": [
+    "satiromarra.code-sftp"
+  ],
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": true,
+    "launchpad": false
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "window.zoomLevel": -2
 }
